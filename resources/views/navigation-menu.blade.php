@@ -6,7 +6,7 @@
                 <!-- Logo -->
                 <div class="shrink-0 flex items-center">
                     <a href="{{ route('dashboard') }}">
-                        <x-jet-application-mark class="block h-9 w-auto" />
+                        <img src="{{ asset('/assets/img/logo.svg') }}" alt="logo" />
                     </a>
                 </div>
 
@@ -91,6 +91,17 @@
                         </x-slot>
 
                         <x-slot name="content">
+
+                            <div class="block px-4 py-2 text-xs text-gray-400">
+                                Acciones
+                            </div>
+
+                            <x-jet-dropdown-link href="/">
+                                Inicio
+                            </x-jet-dropdown-link>
+
+                            <div class="border-t border-gray-100"></div>
+
                             <!-- Account Management -->
                             <div class="block px-4 py-2 text-xs text-gray-400">
                                 {{ __('Manage Account') }}
