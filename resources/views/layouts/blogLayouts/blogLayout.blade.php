@@ -8,7 +8,7 @@
 
     <meta content="width=device-width, initial-scale=1, shrink-to-fit=no" name="viewport" />
 
-    <title>Homepage | Atlas Template</title>
+    <title>Bloggie</title>
 
     <meta property="og:title" content="Homepage | Atlas Template" />
 

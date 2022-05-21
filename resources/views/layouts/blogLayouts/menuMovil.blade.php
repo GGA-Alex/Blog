@@ -8,13 +8,29 @@
                 <a href="/" class="mb-3 block px-2 font-body text-lg font-medium text-white">Inicio</a>
             </li>
 
+            @auth
             <li class="">
-                <a href="{{ route('login') }}" class="mb-3 block px-2 font-body text-lg font-medium text-white">Iniciar sesión</a>
+                <a href="{{ route('dashboard') }}"
+                    class="mb-3 block px-2 font-body text-lg font-medium text-white">Dashboard</a>
             </li>
-
-            <li class="">
-                <a href="{{ route('register') }}" class="mb-3 block px-2 font-body text-lg font-medium text-white">Registrarse</a>
-            </li>
+                <form method="POST" action="{{ route('logout') }}" x-data>
+                    @csrf
+                    <li class="">
+                        <a href="{{ route('logout') }}" @click.prevent="$root.submit();"
+                            class="mb-3 block px-2 font-body text-lg font-medium text-white">Cerrar
+                            sesión</a>
+                    </li>
+                </form>
+            @else
+                <li class="">
+                    <a href="{{ route('login') }}"
+                        class="mb-3 block px-2 font-body text-lg font-medium text-white">Iniciar sesión</a>
+                </li>
+                <li class="">
+                    <a href="{{ route('register') }}"
+                        class="mb-3 block px-2 font-body text-lg font-medium text-white">Registrarse</a>
+                </li>
+            @endauth
 
         </ul>
     </div>
