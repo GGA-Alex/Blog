@@ -80,16 +80,7 @@
 
         <div>
             <div class="container mx-auto">
-                <div class="border-b border-grey-lighter py-16 lg:py-20">
-                    <h1
-                        class="pt-3 font-body text-4xl font-semibold text-primary dark:text-white md:text-5xl lg:text-6xl">
-                        Hola!
-                    </h1>
-                    <h1
-                        class="pt-3 font-body text-4xl font-semibold text-primary dark:text-white md:text-5xl lg:text-6xl">
-                        Esto es bloggie
-                    </h1>
-                </div>
+                @yield('slogan')
 
                 <div class="py-16 lg:py-20">
                     @yield('contenido')

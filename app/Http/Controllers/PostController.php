@@ -9,8 +9,8 @@ class PostController extends Controller
 {
     public function index()
     {
-        $posts = Post::with('category','tags','user')->where('status',2)->take(4)->get();
+        $posts = Post::with('category','tags','user')->where('status',2)->paginate(8);
 
-        return view('blog.index', compact('posts'));
+        return view('blog.blogs', compact('posts'));
     }
 }

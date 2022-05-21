@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\HomePageController;
 use App\Http\Controllers\PostController;
 use Illuminate\Support\Facades\Route;
 
@@ -14,7 +15,8 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/',[PostController::class, 'index'])->name('blog.index');
+Route::get('/',[HomePageController::class, 'index'])->name('blog.index');
+Route::get('/posts',[PostController::class, 'index'])->name('blog.blogsIndex');
 
 Route::middleware([
     'auth:sanctum',
