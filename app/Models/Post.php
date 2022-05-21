@@ -14,14 +14,10 @@ class Post extends Model
     }
 
     public function category() {
-        return $this->belongsTo(Cateory::class);
+        return $this->belongsTo(Category::class);
     }
 
     public function tags() {
         return $this->belongsToMany(Tag::class);
-    }
-
-    public function image() {
-        return $this->morphOne(Image::class, 'imageable');
     }
 }
