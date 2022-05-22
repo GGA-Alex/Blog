@@ -3,4 +3,4 @@
 use App\Http\Controllers\AdminController;
 use Illuminate\Support\Facades\Route;
 
-Route::get('',[AdminController::class, 'index'])->name('home.index');
+Route::get('',[AdminController::class, 'index'])->name('admin.index');
