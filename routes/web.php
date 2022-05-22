@@ -15,8 +15,10 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/',[HomePageController::class, 'index'])->name('blog.index');
-Route::get('/posts',[PostController::class, 'index'])->name('blog.blogsIndex');
+Route::get('/',[HomePageController::class, 'index'])->name('home.index');
+Route::get('/posts',[PostController::class, 'index'])->name('blog.index');
+Route::get('/posts/{post}',[PostController::class, 'show'])->name('blog.show');
+
 
 Route::middleware([
     'auth:sanctum',
