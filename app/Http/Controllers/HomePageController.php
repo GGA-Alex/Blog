@@ -9,7 +9,7 @@ class HomePageController extends Controller
 {
     public function index()
     {
-        $posts = Post::with('category','tags','user')->where('status',2)->take(4)->get();
+        $posts = Post::with('category:id,name','tags:id,name')->where('status',2)->take(4)->get();
 
         return view('blog.home.index', compact('posts'));
     }
