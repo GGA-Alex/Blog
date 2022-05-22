@@ -11,6 +11,6 @@ class HomePageController extends Controller
     {
         $posts = Post::with('category','tags','user')->where('status',2)->take(4)->get();
 
-        return view('blog.index', compact('posts'));
+        return view('blog.home.index', compact('posts'));
     }
 }
