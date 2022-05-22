@@ -10,7 +10,7 @@
 
             @auth
             <li class="">
-                <a href="{{ route('dashboard') }}"
+                <a href="{{ route('admin.index') }}"
                     class="mb-3 block px-2 font-body text-lg font-medium text-white">Dashboard</a>
             </li>
                 <form method="POST" action="{{ route('logout') }}" x-data>
